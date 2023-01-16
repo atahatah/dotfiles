@@ -29,7 +29,7 @@ alias atom="/Applications/Atom.app/Contents/MacOS/Atom"
 eval $(/opt/homebrew/bin/brew shellenv)
 
 # for asdf
-. /opt/homebrew/opt/asdf/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # for gcp
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
