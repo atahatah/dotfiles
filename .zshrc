@@ -43,6 +43,10 @@ source /Users/ishiyamakazuki/.docker/init-zsh.sh || true # Added by Docker Deskt
 # tab completion
 ########################################
 
+# Download Znap, if it's not there yet.
+[[ -f ~/dotfiles/zsh-snap/znap.zsh ]] ||
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/dotfiles/zsh-snap
+
 # for zap
 source ~/dotfiles/zsh-snap/znap.zsh
 
