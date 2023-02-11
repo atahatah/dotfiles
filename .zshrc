@@ -58,19 +58,14 @@ znap source marlonrichert/zsh-autocomplete
 # tab completion
 ########################################
 
-# for github completion
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+# match larger chars if you type smaller chars
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-  autoload -Uz compinit
-  compinit
-fi
+# show completion in smaller space
+# setopt list_packed
 
-# for tab-completion for git
-autoload -Uz compinit && compinit
-
-
+# correct command's spell
+setopt correct
 
 ########################################
 # prompt
@@ -87,6 +82,14 @@ precmd () { vcs_info }
 
 PROMPT='%F{yellow}${vcs_info_msg_0_}%c %# %f'
 RPROMPT='%F{yello}${vcs_info_msg_1_}%f'
+
+########################################
+# keybind
+########################################
+
+# when i type some chars, terminal moves the lines that start with the same chars
+bindkey '^p' history-beginning-search-backward
+bindkey '^n' history-beginning-search-backward
 
 ########################################
 # end 
