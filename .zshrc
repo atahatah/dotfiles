@@ -35,6 +35,21 @@ eval $(/opt/homebrew/bin/brew shellenv)
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
+# for docker
+source /Users/ishiyamakazuki/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+
+########################################
+# tab completion
+########################################
+
+# for zap
+source ~/dotfiles/zsh-snap/znap.zsh
+
+# for autocomplete without tab
+znap source marlonrichert/zsh-autocomplete
+
+
 ########################################
 # tab completion
 ########################################
