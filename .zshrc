@@ -40,7 +40,7 @@ source /Users/ishiyamakazuki/.docker/init-zsh.sh || true # Added by Docker Deskt
 
 
 ########################################
-# tab completion
+# znap
 ########################################
 
 # Download Znap, if it's not there yet.
@@ -50,13 +50,29 @@ source /Users/ishiyamakazuki/.docker/init-zsh.sh || true # Added by Docker Deskt
 # for zap
 source ~/dotfiles/zsh-snap/znap.zsh
 
-# for autocomplete without tab
+# show completable commands without tab
 znap source marlonrichert/zsh-autocomplete
 
+# show the most recent command stating with the same command that now you have typed
+znap source zsh-users/zsh-autosuggestions
+
+znap source zsh-users/zsh-syntax-highlighting
 
 ########################################
 # tab completion
 ########################################
+
+# for github completion
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# for completion
+autoload -Uz compinit && compinit
 
 # match larger chars if you type smaller chars
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
