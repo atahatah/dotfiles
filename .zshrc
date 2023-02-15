@@ -36,7 +36,7 @@ source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completio
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 # for docker
-source /Users/ishiyamakazuki/.docker/init-zsh.sh || true # Added by Docker Desktop
+# source /Users/ishiyamakazuki/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 
 ########################################
