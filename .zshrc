@@ -1,45 +1,4 @@
 ########################################
-# PATH
-#######################################
-# export PATH="$PATH":"$HOME/fvm/default/bin"
-export PATH="$PATH:~/Library/Android/sdk/platform-tools"
-export PATH="$PATH:~/bin"
-export PATH="$PATH:/Library/TeX/texbin/latexmk"
-export PATH="$PATH:/usr/local/smlnj/bin"
-export PATH="$PATH:/opt/homebrew/bin"
-export PATH="$PATH":"$HOME/.pub-cache/bin"
-
-
-#######################################
-# alias
-#######################################
-
-alias atom="/Applications/Atom.app/Contents/MacOS/Atom"
-
-#######################################
-# some applecation
-#######################################
-
-# for pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/shims:$PATH"
-# eval "$(pyenv init -)"
-
-# for brew
-eval $(/opt/homebrew/bin/brew shellenv)
-
-# for asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-# for gcp
-source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-
-# for docker
-# source /Users/ishiyamakazuki/.docker/init-zsh.sh || true # Added by Docker Desktop
-
-
-########################################
 # znap
 ########################################
 
@@ -106,6 +65,12 @@ RPROMPT='%F{yello}${vcs_info_msg_1_}%f'
 # when i type some chars, terminal moves the lines that start with the same chars
 bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-backward
+
+########################################
+# read environment dependant
+########################################
+[ -f $ZDOTDIR/.zshrc_`uname`.zsh ] && . $ZDOTDIR/.zshrc_`uname`.zsh
+[ -f $ZDOTDIR/.zshrc_local.zsh ] && . $ZDOTDIR/.zshrc_local.zsh
 
 ########################################
 # end 

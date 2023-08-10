@@ -4,6 +4,11 @@
 
 # 必要なファイルだけホワイトリスト形式で追記
 !/.gitignore
-!/.README.md
-!/.zshrc
 !/.vimrc
+!/.zshrc
+!/.zshrc_Darwin.zsh
+!/.zshrc_Linux.zsh
+!/Makefile
+!/.README.md
+
+!/bin/
