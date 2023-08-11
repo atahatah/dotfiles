@@ -1,13 +1,13 @@
 #!/bin/bash
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+DOT_DIR="$HOME/.dotfiles"
+for f in *;
+do
+    [[ "$f" == ".git" ]] && continue
+    [[ "$f" == ".gitignore" ]] && continue
+    [[ "$f" == "Makefile" ]] && continue
+    [[ "$f" == "README.md" ]] && continue
 
-for dotfile in "${SCRIPT_DIR}"/.??* ; do
-    [[ "$dotfile" == "${SCRIPT_DIR}/.git" ]] && continue
-    [[ "$dotfile" == "${SCRIPT_DIR}/.github" ]] && continue
-    [[ "$dotfile" == "${SCRIPT_DIR}/.DS_Store" ]] && continue
-    [[ "$dotfile" == "${SCRIPT_DIR}/.Makefile" ]] && continue
-    [[ "$dotfile" == "${SCRIPT_DIR}/.README.md" ]] && continue
-
-    ln -fnsv "$dotfile" "$HOME"
+    ln -snf $DOT_DIR/"$f" $HOME/"$f"
+    echo "Installed $f"
 done
