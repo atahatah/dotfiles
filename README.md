@@ -1,7 +1,8 @@
 # dotfiles
 
 ```sh
-ln -s ~/dotfiles/.zshrc ~
+cd /path/to/dotfiles
+make
 ```
 
 ## 参考
@@ -12,3 +13,4 @@ ln -s ~/dotfiles/.zshrc ~
 [dotfiles 整理 その 1：zsh の構成を見なおそう](https://kitakitabauer.hatenablog.com/entry/2016/09/13/173456)
 [.zshrc を色んな環境で共有する方法を考えてみた](https://qiita.com/catatsuy/items/00ebf78f56960b6d43c2)
 [ワンライナーで dotfiles をインストールする](https://kisqragi.hatenablog.com/entry/2020/02/17/224129)
+[linux インストールからの環境構築を自動化する](https://qiita.com/aki-f/items/494cefe0e98cc74249fa)

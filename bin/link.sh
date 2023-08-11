@@ -1,13 +1,18 @@
 #!/bin/bash
+SCRIPT_DIR="$HOME/dotfiles"
+cd $SCRIPT_DIR
 
-DOT_DIR="$HOME/.dotfiles"
-for f in *;
+echo "linked files:"
+
+for f in .??*
 do
     [[ "$f" == ".git" ]] && continue
     [[ "$f" == ".gitignore" ]] && continue
     [[ "$f" == "Makefile" ]] && continue
     [[ "$f" == "README.md" ]] && continue
 
-    ln -snf $DOT_DIR/"$f" $HOME/"$f"
-    echo "Installed $f"
+    [[ -L "$HOME/$f" ]] && unlink "$HOME/$f"
+    [[ -f "$HOME/$f" ]] && mkdir -p ./backup && mv "$HOME/$f" ./backup/
+    ln -s "$SCRIPT_DIR/$f" "$HOME/$f"
+    echo "$f"
 done
