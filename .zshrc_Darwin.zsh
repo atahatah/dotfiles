@@ -1,7 +1,7 @@
 ########################################
 # variables
 ########################################
-BREWPATH=$(brew --prefix)
+[[ $(uname -m) == "arm64" ]] && BREWPATH="/opt/homebrew" || BREWPATH="/usr/local"
 
 ########################################
 # PATH
