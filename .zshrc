@@ -21,15 +21,6 @@ znap source zsh-users/zsh-syntax-highlighting
 # tab completion
 ########################################
 
-# for github completion
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
-
 # for completion
 autoload -Uz compinit && compinit
 
