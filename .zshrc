@@ -55,7 +55,7 @@ zstyle ':vcs_info:git:*' stagedstr ' staged'
 zstyle ':vcs_info:git:*' unstagedstr ' unstaged'
 precmd () { vcs_info }
 
-[[ -f /.dockerenv ]] && PROMPT_COLOR=blue || PROMPT_COLOR=yellow
+[[ -f /.dockerenv ]] && PROMPT_COLOR=cyan || PROMPT_COLOR=yellow
 
 PROMPT='%F{${PROMPT_COLOR}}${vcs_info_msg_0_}%c %# %f'
 RPROMPT='%F{${PROMPT_COLOR}}${vcs_info_msg_1_}%f'
