@@ -43,5 +43,7 @@ fi
 
 # for docker compose
 mkdir -p ~/.zsh/completions
-ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completions/_docker-compose
+[[ ! -L ~/.zsh/completions/_docker-compose ]] &&
+  ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completions/_docker-compose
 fpath=(~/.zsh/completions $fpath)
+autoload -Uz compinit && compinit
