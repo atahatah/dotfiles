@@ -3,6 +3,7 @@
 /.**
 
 # 必要なファイルだけホワイトリスト形式で追記
+!/.gitconfig
 !/.gitignore
 !/.vimrc
 !/.zshrc

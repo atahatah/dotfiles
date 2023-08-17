@@ -1,0 +1,8 @@
+[user]
+	name = atahatah
+	email = ratdotl.hata@gmail.com
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	br = branch
