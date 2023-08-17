@@ -6,6 +6,7 @@
 !/.gitconfig
 !/.gitignore
 !/.vimrc
+!/.Xmodmap
 !/.zshrc
 !/.zshrc_Darwin.zsh
 !/.zshrc_Linux.zsh
