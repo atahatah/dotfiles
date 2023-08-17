@@ -5,6 +5,7 @@
 # 必要なファイルだけホワイトリスト形式で追記
 !/.gitignore
 !/.vimrc
+!/.Xmodmap
 !/.zshrc
 !/.zshrc_Darwin.zsh
 !/.zshrc_Linux.zsh
