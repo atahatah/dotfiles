@@ -42,20 +42,18 @@ setopt correct
 ########################################
 # prompt
 ########################################
+[[ -f /.dockerenv ]] && DOCKERSTATUS=$'%K{26} docker %k ' || DOCKERSTATUS=''
 
 # to load git branch name
 autoload -Uz vcs_info
 setopt prompt_subst
-zstyle ':vcs_info:git:*' formats '(%b) ' '%r%F{red}%c%u%f'
+zstyle ':vcs_info:git:*' formats ' %K{202} %b(%r)%c%u %k'
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr ' staged'
 zstyle ':vcs_info:git:*' unstagedstr ' unstaged'
 precmd () { vcs_info }
 
-[[ -f /.dockerenv ]] && PROMPT_COLOR=cyan || PROMPT_COLOR=yellow
-
-PROMPT='%F{${PROMPT_COLOR}}${vcs_info_msg_0_}%c %# %f'
-RPROMPT='%F{${PROMPT_COLOR}}${vcs_info_msg_1_}%f'
+PROMPT='%(?.%F{green}O%f.%F{red}X%f) '$'${DOCKERSTATUS}%K{100} %n@%m %k''${vcs_info_msg_0_}'$' %F{117}%~%f\n''%B%U%F{yellow}%. %#%f%u%b '
 
 ########################################
 # keybind
