@@ -3,9 +3,6 @@
 ########################################
 [[ $(uname -m) == "arm64" ]] && BREWPATH="/opt/homebrew" || BREWPATH="/usr/local"
 
-# to cache `brew list`
-BREWLIST=$(brew list)
-
 ########################################
 # PATH
 #######################################
@@ -25,10 +22,10 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 eval $($BREWPATH/bin/brew shellenv)
 
 # for asdf
-[ $(echo $BREWLIST | grep asdf) ] && . $BREWPATH/opt/asdf/libexec/asdf.sh
+type asdf > /dev/null && . $BREWPATH/opt/asdf/libexec/asdf.sh
 
 # for gcp
-if [ $(echo $BREWLIST | grep google-cloud-sdk) ]; then
+if [[ -f $BREWPATH/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ]]; then
   source $BREWPATH/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
   source $BREWPATH/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 fi

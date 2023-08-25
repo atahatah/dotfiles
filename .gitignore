@@ -13,12 +13,14 @@
 !/.zshrc_Darwin.zsh
 !/.zshrc_Linux.zsh
 !/plugins.toml
+!/starship.toml
 
 !/.github/
 .github/**
 !/.github/workflows/
 !/.github/workflows/main.yml
 !/bin/
+!/img/
 !/.gitignore
 !/docker-compose.yml
 !/Dockerfile

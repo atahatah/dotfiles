@@ -4,3 +4,5 @@ services:
     build: .
     tty: true
     stdin_open: true
+    # volumes:
+    #   - ./:/home/user/dotfiles

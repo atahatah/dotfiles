@@ -8,6 +8,15 @@ cd $HOME/dotfiles
 make all
 ```
 
+### フォントの設定
+
+- VSCode(MacOS)
+  `editor.fontFamily`に、`Knack Nerd Font`を追加。
+
+- Terminal(MacOS)
+  `Terminal`を開き、`Cmd+,`でプロファイルを開き、フォントを次のように`Knack Nerd Font`に変更する。
+  ![ターミナルのフォントの変更](img/macos_terminal_font.png)
+
 ## 更新
 
 zsh プラグインなどの更新の実行
@@ -57,3 +66,7 @@ docker compose down
 [Mac の環境を dotfiles でセットアップしてみた](https://dev.classmethod.jp/articles/joined-mac-dotfiles-customize/)
 
 [実行したコマンドの終了コードを表示する](https://qiita.com/takayuki206/items/f4d0dbb45e5ee2ee698e)
+
+[nerd-fonts/readme_ja.md](https://github.com/ryanoasis/nerd-fonts/blob/master/readme_ja.md#font-patcher)
+
+[ローカルにあるフォントを調べる](https://zenn.dev/sqer/articles/15219df9fab18d)
