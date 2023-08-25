@@ -1,16 +1,15 @@
-FROM ubuntu:22.04
+FROM alpine:3.18
 
-RUN sed -i 's@archive.ubuntu.com@ftp.jaist.ac.jp/pub/Linux@g' /etc/apt/sources.list
-
-RUN apt update && apt install -y --no-install-recommends \
+RUN apk --update add \
+    bash \
     ca-certificates \
     curl \
     git \
     make \
     sudo \
     zsh \
-    && apt clean \
-    && rm -rf /var/lib/apt/lists/*
+    zsh-vcs \
+    && rm -rf /var/cache/apk/*
 
 RUN adduser --disabled-password --gecos '' --shell /bin/zsh user
 RUN echo "user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-user
