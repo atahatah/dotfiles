@@ -5,23 +5,17 @@
 ZDOTDIR=~
 
 ########################################
-# znap
+# read environment dependant
+########################################
+[ -f $ZDOTDIR/.zshrc_`uname`.zsh ] && . $ZDOTDIR/.zshrc_`uname`.zsh
+[ -f $ZDOTDIR/.zshrc_local.zsh ] && . $ZDOTDIR/.zshrc_local.zsh
+
+########################################
+# sheldon
 ########################################
 
-# Download Znap, if it's not there yet.
-[[ -f ~/dotfiles/zsh-snap/znap.zsh ]] ||
-    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/dotfiles/zsh-snap
-
-# for zap
-source ~/dotfiles/zsh-snap/znap.zsh
-
-# show completable commands without tab
-znap source marlonrichert/zsh-autocomplete
-
-# show the most recent command stating with the same command that now you have typed
-znap source zsh-users/zsh-autosuggestions
-
-znap source zsh-users/zsh-syntax-highlighting
+# loading plugins with sheldon
+eval "$(sheldon source)"
 
 ########################################
 # tab completion
@@ -62,12 +56,6 @@ PROMPT='%(?.%F{green}O%f.%F{red}X%f) '$'${DOCKERSTATUS}%K{100} %n@%m %k''${vcs_i
 # when i type some chars, terminal moves the lines that start with the same chars
 bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-backward
-
-########################################
-# read environment dependant
-########################################
-[ -f $ZDOTDIR/.zshrc_`uname`.zsh ] && . $ZDOTDIR/.zshrc_`uname`.zsh
-[ -f $ZDOTDIR/.zshrc_local.zsh ] && . $ZDOTDIR/.zshrc_local.zsh
 
 ########################################
 # end 

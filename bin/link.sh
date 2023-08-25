@@ -17,3 +17,8 @@ do
     ln -snfv "$SCRIPT_DIR/$f" "$HOME/$f"
     echo "$f"
 done
+
+f="plugins.toml"
+[[ -L "$HOME/$f" ]] && unlink "$HOME/$f"
+[[ -f "$HOME/$f" ]] && mkdir -p ./backup && mv "$HOME/$f" ./backup/
+ln -snfv "$SCRIPT_DIR/$f" "$XDG_CONFIG_HOME/sheldon/plugins.toml"

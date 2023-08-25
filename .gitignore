@@ -11,6 +11,7 @@
 !/.zshrc_Darwin.zsh
 !/.zshrc_Linux.zsh
 !/Makefile
+!/plugins.toml
 !/.README.md
 
 !/bin/
