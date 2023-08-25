@@ -36,18 +36,18 @@ setopt correct
 ########################################
 # prompt
 ########################################
-[[ -f /.dockerenv ]] && DOCKERSTATUS=$'%K{26} docker %k ' || DOCKERSTATUS=''
+[[ -f /.dockerenv ]] && DOCKERSTATUS=$'%K{blue} Docker %k ' || DOCKERSTATUS=''
 
 # to load git branch name
 autoload -Uz vcs_info
 setopt prompt_subst
-zstyle ':vcs_info:git:*' formats ' %K{202} %b(%r)%c%u %k'
+zstyle ':vcs_info:git:*' formats ' %K{red} %b %k %F{red}%r%c%u%f' '(%b)'
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr ' staged'
-zstyle ':vcs_info:git:*' unstagedstr ' unstaged'
+zstyle ':vcs_info:git:*' stagedstr ' %Bstaged%b'
+zstyle ':vcs_info:git:*' unstagedstr ' %Bunstaged%b'
 precmd () { vcs_info }
 
-PROMPT='%(?.%F{green}O%f.%F{red}X%f) '$'${DOCKERSTATUS}%K{100} %n@%m %k''${vcs_info_msg_0_}'$' %F{117}%~%f\n''%B%U%F{yellow}%. %#%f%u%b '
+PROMPT='%(?.%F{green}O%f.%F{red}X%f) '$'${DOCKERSTATUS}%K{cyan} %n|%m %k''${vcs_info_msg_0_}'$' %F{cyan}%~%f\n''%B%U%F{yellow}%4>>%m%>> %6>.>%.%>>${vcs_info_msg_1_} %#%f%u%b '
 
 ########################################
 # keybind
