@@ -3,6 +3,8 @@
 /.**
 
 # 必要なファイルだけホワイトリスト形式で追記
+!/.bash_profile
+!/.bashrc
 !/.Brewfile
 !/.gitconfig
 !/.vimrc
