@@ -4,3 +4,5 @@ link:
 	bin/link.sh
 install:
 	bin/install.sh
+upgrade:
+	bin/upgrade.sh

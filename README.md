@@ -1,9 +1,20 @@
 # dotfiles
 
+## インストール
+
 ```sh
 git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles
 cd $HOME/dotfiles
 make all
+```
+
+## 更新
+
+zsh プラグインなどの更新の実行
+
+```sh
+cd $HOME/dotfiles
+make update
 ```
 
 ## テスト
