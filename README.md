@@ -1,8 +1,9 @@
 # dotfiles
 
 ```sh
-cd /path/to/dotfiles
-make
+git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles
+cd $HOME/dotfiles
+make all
 ```
 
 ## 参考
