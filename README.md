@@ -6,6 +6,25 @@ cd $HOME/dotfiles
 make all
 ```
 
+## テスト
+
+Docker を使ってテストすることが可能です。
+
+### 立ち上げる
+
+```sh
+cd path/to/dir
+docker compose build
+docker compose up -d
+docker compose exec dotfiles zsh
+```
+
+### 後片付け
+
+```sh
+docker compose down
+```
+
 ## 参考
 
 [ようこそ dotfiles の世界へ](https://qiita.com/yutkat/items/c6c7584d9795799ee164)

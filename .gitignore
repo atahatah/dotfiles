@@ -4,14 +4,16 @@
 
 # 必要なファイルだけホワイトリスト形式で追記
 !/.gitconfig
-!/.gitignore
 !/.vimrc
 !/.Xmodmap
 !/.zshrc
 !/.zshrc_Darwin.zsh
 !/.zshrc_Linux.zsh
-!/Makefile
 !/plugins.toml
-!/.README.md
 
 !/bin/
+!/.gitignore
+!/docker-compose.yml
+!/Dockerfile
+!/Makefile
+!/README.md
