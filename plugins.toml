@@ -10,10 +10,13 @@
 #
 # See the documentation for more https://github.com/rossmacarthur/sheldon#readme
 
-[plugins]
+shell = "zsh"
 
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
+
+[templates]
+defer = "{{ hooks | get: \"pre\" | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks | get: \"post\" | nl }}"
 
 [plugins.zsh-autosuggestions]
 github = 'zsh-users/zsh-autosuggestions'
@@ -22,16 +25,11 @@ apply = ["defer"]
 
 [plugins.zsh-syntax-highlighting]
 github = 'zsh-users/zsh-syntax-highlighting'
-apply = ["defer"]
 
 [plugins.zsh-zutocomplete]
 github = 'marlonrichert/zsh-autocomplete'
-apply = ["defer"]
 
 # For example:
 #
 # [plugins.base16]
 # github = "chriskempson/base16-shell"
-
-[templates]
-defer = "{{ hooks | get: \"pre\" | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks | get: \"post\" | nl }}"
