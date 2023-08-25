@@ -42,3 +42,5 @@ docker compose down
 [linux インストールからの環境構築を自動化する](https://qiita.com/aki-f/items/494cefe0e98cc74249fa)
 
 [高速で設定しやすい Zsh/Bash プラグインマネージャー Sheldon の紹介](https://zenn.dev/ganta/articles/e1e0746136ce67)
+
+[Mac の環境を dotfiles でセットアップしてみた](https://dev.classmethod.jp/articles/joined-mac-dotfiles-customize/)

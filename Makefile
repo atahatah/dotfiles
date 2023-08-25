@@ -1,5 +1,5 @@
 nothing:
-all: install link
+all: link install
 link:
 	bin/link.sh
 install:
