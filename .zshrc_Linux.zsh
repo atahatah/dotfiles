@@ -19,4 +19,4 @@ fi
 ########################################
 # Key Mappings
 #######################################
-xmodmap ~/.Xmodmap
+type xmodmap > /dev/null && xmodmap ~/.Xmodmap
