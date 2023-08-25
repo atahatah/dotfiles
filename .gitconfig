@@ -6,5 +6,3 @@
 	st = status
 	co = checkout
 	br = branch
-[credential]
-	helper = "!f() { /home/user/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /tmp/vscode-remote-containers-997216b7-bd1d-48e8-9309-2468cd30e6db.js git-credential-helper $*; }; f"
