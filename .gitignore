@@ -12,6 +12,10 @@
 !/.zshrc_Linux.zsh
 !/plugins.toml
 
+!/.github/
+.github/**
+!/.github/workflows/
+!/.github/workflows/main.yml
 !/bin/
 !/.gitignore
 !/docker-compose.yml

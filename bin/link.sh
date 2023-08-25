@@ -9,12 +9,10 @@ do
     [[ "$f" == ".git" ]] && continue
     [[ "$f" == ".gitignore" ]] && continue
     [[ "$f" == ".DS_Store" ]] && continue
-    [[ "$f" == "Makefile" ]] && continue
-    [[ "$f" == "README.md" ]] && continue
 
     [[ -L "$HOME/$f" ]] && unlink "$HOME/$f"
     [[ -f "$HOME/$f" ]] && mkdir -p ./backup && mv "$HOME/$f" ./backup/
-    ln -snfv "$SCRIPT_DIR/$f" "$HOME/$f"
+    ln -snfv "$SCRIPT_DIR/$f" "$HOME/$f" > /dev/null
     echo "$f"
 done
 
