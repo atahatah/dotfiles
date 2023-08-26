@@ -70,3 +70,5 @@ docker compose down
 [nerd-fonts/readme_ja.md](https://github.com/ryanoasis/nerd-fonts/blob/master/readme_ja.md#font-patcher)
 
 [ローカルにあるフォントを調べる](https://zenn.dev/sqer/articles/15219df9fab18d)
+
+[dotfiles の更新忘れを防いで継続的に管理していく 🔧 💪](https://korosuke613.hatenablog.com/entry/2021/05/23/mydotfiles)

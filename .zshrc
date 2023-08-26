@@ -64,5 +64,11 @@ bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-backward
 
 ########################################
+# check updates 
+########################################
+
+. $HOME/dotfiles/bin/check.sh
+
+########################################
 # end 
 ########################################
