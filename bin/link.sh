@@ -25,7 +25,7 @@ ln -snfv "$SCRIPT_DIR/$f" "$FILEDIR/$f"
 
 f="starship.toml"
 FILEDIR="$HOME/.config"
-[[ -L "$FILEDIR/$f" ]] && unlink "$FILEDIER/$f"
-[[ -f "$FILEDIR/$f" ]] && mkdir -p ./backup && mv "$FILEDIER/$f" ./backup/
+[[ -L "$FILEDIR/$f" ]] && unlink "$FILEDIR/$f"
+[[ -f "$FILEDIR/$f" ]] && mkdir -p ./backup && mv "$FILEDIR/$f" ./backup/
 mkdir -p "$FILEDIR"
 ln -snfv "$SCRIPT_DIR/$f" "$FILEDIR/$f"
