@@ -6,3 +6,5 @@
 	st = status
 	co = checkout
 	br = branch
+[include]
+    path = .gitconfig.local

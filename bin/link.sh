@@ -30,6 +30,11 @@ FILEDIR="$HOME/.config"
 mkdir -p "$FILEDIR"
 ln -snfv "$SCRIPT_DIR/$f" "$FILEDIR/$f"
 
+
+# create local files
+touch $HOME/.zshrc_local.zsh
+touch $HOME/.gitconfig.local
+
 unset SCRIPT_DIR
 unset f
 unset FILEDIR
