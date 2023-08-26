@@ -20,3 +20,5 @@ elif ! git -C $DOTFILES_HOME diff --exit-code --stat --cached origin/main > /dev
 else
     echo "${fg[green]}Anything related to dotfiles is the latest!${reset_color}" 
 fi
+
+unset DOTFILES_HOME

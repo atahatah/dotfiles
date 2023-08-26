@@ -48,3 +48,9 @@ mkdir -p ~/.zsh/completions
   ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completions/_docker-compose
 fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit && compinit
+
+########################################
+# unset
+########################################
+
+unset BREWPATH

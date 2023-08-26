@@ -44,3 +44,8 @@ else
         echo "starship has already installed globally."
     fi
 fi
+
+########################################
+# unset
+########################################
+unset LOCAL

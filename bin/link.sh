@@ -29,3 +29,7 @@ FILEDIR="$HOME/.config"
 [[ -f "$FILEDIR/$f" ]] && mkdir -p ./backup && mv "$FILEDIR/$f" ./backup/
 mkdir -p "$FILEDIR"
 ln -snfv "$SCRIPT_DIR/$f" "$FILEDIR/$f"
+
+unset SCRIPT_DIR
+unset f
+unset FILEDIR
