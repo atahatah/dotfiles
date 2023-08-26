@@ -89,3 +89,5 @@ docker compose down
 [ローカルにあるフォントを調べる](https://zenn.dev/sqer/articles/15219df9fab18d)
 
 [dotfiles の更新忘れを防いで継続的に管理していく 🔧 💪](https://korosuke613.hatenablog.com/entry/2021/05/23/mydotfiles)
+
+[シェルスクリプトの echo で”問題なく”色をつける(bash 他対応)](https://qiita.com/ko1nksm/items/095bdb8f0eca6d327233)

@@ -2,8 +2,8 @@ nothing:
 link:
 	bin/link.sh
 install: link
-	bin/install.sh
+	bin/installer/installer.sh
 install_locally: link
-	bin/install.sh -l
+	bin/installer/installer.sh -l
 upgrade:
-	bin/upgrade.sh
+	bin/upgrader/upgrader.sh
