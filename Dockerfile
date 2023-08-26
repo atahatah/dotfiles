@@ -26,6 +26,6 @@ RUN export GIT_SSL_NO_VERIFY=1 \
     && mkdir -p ${HOME}/dotfiles \
     && git clone https://github.com/atahatah/dotfiles.git ${HOME}/dotfiles \
     && cd ${HOME}/dotfiles \
-    && make all
+    && make install
 
 CMD [ "/bin/zsh" ]

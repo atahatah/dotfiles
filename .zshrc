@@ -5,6 +5,12 @@
 ZDOTDIR=~
 
 ########################################
+# PATH
+########################################
+[[ -d $HOME/bin ]] && export PATH="$PATH:$HOME/bin"
+[[ -d $HOME/.local/bin ]] && export PATH=$PATH:$HOME/.local/bin
+
+########################################
 # read environment dependant
 ########################################
 [ -f $ZDOTDIR/.zshrc_`uname`.zsh ] && . $ZDOTDIR/.zshrc_`uname`.zsh

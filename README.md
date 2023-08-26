@@ -1,11 +1,17 @@
 # dotfiles
 
+## 特徴
+
+- MacOS と Ubuntu の環境を想定しています。
+- Docker 内の dotfiles としての利用も想定しています。
+- `$HOME`以下のみの変更に抑えることも可能です。
+
 ## インストール
 
 ```sh
 git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles
 cd $HOME/dotfiles
-make all
+make install
 ```
 
 ### フォントの設定
@@ -17,9 +23,20 @@ make all
   `Terminal`を開き、`Cmd+,`でプロファイルを開き、フォントを次のように`Knack Nerd Font`に変更する。
   ![ターミナルのフォントの変更](img/macos_terminal_font.png)
 
+### ローカルにインストール
+
+`$HOME`以下のみの変更に抑えます。ただし、MacOS の場合、`Homebrew`とそれによる dependencies のインストールが抑制されます。このインストール方法は、どちらかというと Linux 環境を想定しています。
+
+```sh
+git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles
+cd $HOME/dotfiles
+make install_locally
+```
+
 ## 更新
 
 zsh プラグインなどの更新の実行
+ただし、`make install_locally`によりローカルに保存された場合は正常な動作を保証しません。
 
 ```sh
 cd $HOME/dotfiles

@@ -1,8 +1,6 @@
 ########################################
 # PATH
 #######################################
-[[ -d $HOME/bin ]] && export PATH=$PATH:$HOME/bin
-[[ -d $HOME/.local/bin ]] && export PATH=$PATH:$HOME/.local/bin
 [[ -d /usr/local/cuda ]] && export PATH=$PATH:/usr/local/cuda/bin
 
 #######################################

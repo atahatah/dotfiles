@@ -26,11 +26,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: install all with this repository
-        run: make all
+        run: make install
         shell: bash
 
       - name: install all with this repository(2nd)
-        run: make all
+        run: make install
         shell: bash
 
       - name: upgrade with this repository
@@ -49,11 +49,34 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: install all with this repository
-        run: make all
+        run: make install
         shell: bash
 
       - name: install all with this repository(2nd)
-        run: make all
+        run: make install
+        shell: bash
+
+      - name: install all with this repository
+        run: make upgrade
+        shell: bash
+
+  Linux-local-install:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Create directory and copy files
+        run: |
+          cp -r ${{ github.workspace }} $HOME
+
+      # Runs a single command using the runners shell
+      - name: install all with this repository
+        run: make install_locally
+        shell: bash
+
+      - name: install all with this repository(2nd)
+        run: make install_locally
         shell: bash
 
       - name: install all with this repository

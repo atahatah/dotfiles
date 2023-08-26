@@ -4,12 +4,16 @@
 # Homebrew
 ########################################
 
-# install Homebrew
-type brew > /dev/null || \
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if $LOCAL; then
+  echo 'did not install Homebrew because the "-l" option (install locally) was specified.'
+else
+  # install Homebrew
+  type brew > /dev/null || \
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# install all dependencies from the Brewfile with Homebrew
-brew bundle --global
+  # install all dependencies from the Brewfile with Homebrew
+  brew bundle --global
+fi
 
 ########################################
 # font

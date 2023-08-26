@@ -8,7 +8,6 @@
 #######################################
 # export PATH="$PATH":"$HOME/fvm/default/bin"
 export PATH="$PATH:~/Library/Android/sdk/platform-tools"
-export PATH="$PATH:~/bin"
 export PATH="$PATH:/Library/TeX/texbin/latexmk"
 export PATH="$PATH:/usr/local/smlnj/bin"
 export PATH="$PATH:$BREWPATH/bin"
