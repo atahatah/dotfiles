@@ -1,6 +1,8 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+format = '$status$all'
+
 [aws]
 disabled = true
 
@@ -54,13 +56,18 @@ style = "white"
 Macos = " "
 Ubuntu = " "
 
+[python]
+format = 'via [${symbol}](yellow)[${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+version_format = "${raw}"
+
 [shell]
 bash_indicator = '\$'
 disabled = false
 zsh_indicator = '%'
 
 [status]
-disabled = true
+disabled = false
 format = '[$symbol]($style)'
 map_symbol = true
 success_symbol = '[](bold green) '
