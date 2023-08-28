@@ -23,6 +23,21 @@ ZDOTDIR=~
 # loading plugins with sheldon
 eval "$(sheldon source)"
 
+# Autocomplete for Zsh
+
+# Reset history key bindings to Zsh default
+() {
+   local -a prefix=( '\e'{\[,O} )
+   local -a up=( ${^prefix}A ) down=( ${^prefix}B )
+   local key=
+   for key in $up[@]; do
+      bindkey "$key" up-line-or-history
+   done
+   for key in $down[@]; do
+      bindkey "$key" down-line-or-history
+   done
+}
+
 ########################################
 # tab completion
 ########################################
@@ -70,6 +85,17 @@ fi
 # when i type some chars, terminal moves the lines that start with the same chars
 bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-backward
+
+########################################
+# Settings
+########################################
+
+# history
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=100000
+setopt hist_ignore_dups
+setopt EXTENDED_HISTORY
 
 ########################################
 # check updates 
