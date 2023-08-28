@@ -18,7 +18,7 @@ success_symbol = '[❯](bold green) '
 format = '[ $duration]($style)'
 
 [container]
-format = '[$name]($style) '
+format = '[$name]($style)'
 style = 'blue'
 symbol = 'Docker'
 
@@ -62,9 +62,9 @@ symbol = " "
 version_format = "${raw}"
 
 [shell]
-bash_indicator = '\$'
+bash_indicator = ' \$'
 disabled = false
-zsh_indicator = '%'
+zsh_indicator = ' %'
 
 [status]
 disabled = false
