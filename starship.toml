@@ -18,9 +18,9 @@ success_symbol = '[❯](bold green) '
 format = '[ $duration]($style)'
 
 [container]
-format = '[$name]($style)'
-style = 'blue'
-symbol = 'Docker'
+format = '[$symbol]($style)'
+style = 'blue bold'
+symbol = 'Dk'
 
 [dart]
 symbol = ' '
@@ -41,7 +41,7 @@ commit_hash_length = 4
 added_style = 'green'
 deleted_style = 'red'
 disabled = false
-format = '\[([+$added]($added_style))([-$deleted]($deleted_style))\] '
+format = '(\[([+$added]($added_style))([-$deleted]($deleted_style))\] )'
 
 [git_status]
 ahead = '⇡${count}'
@@ -78,3 +78,11 @@ disabled = false
 format = '[$symbol]($style)'
 style = 'bold green'
 symbol = ' '
+
+[custom.gpu]
+command = 'nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits'
+description = 'The usage rate of the NVIDIA GPU'
+when = ' type nvidia-smi && (ls *.py || ls *.ipynb)'
+format = '$symbol [$output%]($style) '
+style = 'bold blue'
+symbol = 'GPU'
