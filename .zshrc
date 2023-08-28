@@ -43,10 +43,9 @@ setopt correct
 # prompt
 ########################################
 
-# When using Starship with Linux, Docker, Nvidia, zsh for auto-completion,
-# the display bugs out
+# the display bugs out when the last prompt contains emoji on a container on Linux with nvidia
 
-if type starship > /dev/null && ! [ -f /.dockerenv ]; then
+if type starship > /dev/null; then
     # starship
     eval "$(starship init zsh)"
 else

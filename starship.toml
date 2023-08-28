@@ -16,16 +16,14 @@ success_symbol = '[❯](bold green) '
 format = '[ $duration]($style)'
 
 [container]
-format = '[$symbol]($style) '
+format = '[$name]($style) '
 style = 'blue'
-symbol = '🐳'
+symbol = 'Docker'
 
 [dart]
 symbol = ' '
 
 [directory]
-repo_root_format = '[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
-repo_root_style = 'underline bold red'
 truncation_length = 8
 
 [gcloud]
@@ -49,7 +47,7 @@ behind = '⇣${count}'
 diverged = '⇕⇡${ahead_count}⇣${behind_count}'
 
 [os]
-disabled = false
+disabled = true
 style = "white"
 
 [os.symbols]
@@ -57,12 +55,12 @@ Macos = " "
 Ubuntu = " "
 
 [shell]
-bash_indicator = ' \$'
+bash_indicator = '\$'
 disabled = false
-zsh_indicator = ' %'
+zsh_indicator = '%'
 
 [status]
-disabled = false
+disabled = true
 format = '[$symbol]($style)'
 map_symbol = true
 success_symbol = '[](bold green) '
@@ -72,4 +70,4 @@ symbol = '[✗](bold red) '
 disabled = false
 format = '[$symbol]($style)'
 style = 'bold green'
-symbol = '‍ '
+symbol = ' '
