@@ -17,6 +17,16 @@ ZDOTDIR=~
 [ -f $ZDOTDIR/.zshrc_local.zsh ] && . $ZDOTDIR/.zshrc_local.zsh
 
 ########################################
+# alias
+########################################
+
+alias d='docker'
+alias dc='docker-compose'
+alias dcb='docker-compose build'
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
+
+########################################
 # sheldon
 ########################################
 
