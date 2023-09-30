@@ -163,3 +163,10 @@ else
     }
     PROMPT_COMMAND='__show_status;'${PROMPT_COMMAND//__show_status;/}
 fi
+
+########################################
+# check updates 
+########################################
+
+# Fetch updates of this repository on backgound
+(cd $HOME/dotfiles && git fetch > /dev/null 2>&1 &) 

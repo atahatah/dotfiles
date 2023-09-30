@@ -113,6 +113,9 @@ setopt EXTENDED_HISTORY
 
 . $HOME/dotfiles/bin/check.sh
 
+# Fetch updates of this repository on backgound
+(cd $HOME/dotfiles && git fetch > /dev/null 2>&1 &) 
+
 ########################################
 # end 
 ########################################
