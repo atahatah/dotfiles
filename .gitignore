@@ -7,6 +7,7 @@
 !/.bashrc
 !/.Brewfile
 !/.gitconfig
+!/.tmux.conf
 !/.vimrc
 !/.Xmodmap
 !/.zshrc
