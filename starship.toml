@@ -80,9 +80,9 @@ style = 'bold green'
 symbol = ' '
 
 [custom.gpu]
-command = 'nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits'
+command = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | tr '\n' ' ' | sed 's/[0-9]\\+/&%/g'"
 description = 'The usage rate of the NVIDIA GPU'
 when = ' type nvidia-smi && (ls *.py || ls *.ipynb)'
-format = '$symbol [$output%]($style) '
-style = 'bold blue'
-symbol = 'GPU'
+format = 'on [$symbol $output]($style) '
+style = 'bold purple'
+symbol = ' '
