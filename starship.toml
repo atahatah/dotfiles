@@ -84,5 +84,5 @@ command = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits 
 description = 'The usage rate of the NVIDIA GPU'
 when = ' type nvidia-smi && (ls *.py || ls *.ipynb)'
 format = 'on [$symbol $output]($style) '
-style = 'bold purple'
-symbol = ' '
+style = 'purple'
+symbol = ''
