@@ -20,11 +20,7 @@ ZDOTDIR=~
 # alias
 ########################################
 
-alias d='docker'
-alias dc='docker-compose'
-alias dcb='docker-compose build'
-alias dcu='docker-compose up -d'
-alias dcd='docker-compose down'
+[ -f $HOME/.aliases.sh ] && . $HOME/.aliases.sh
 
 ########################################
 # sheldon
