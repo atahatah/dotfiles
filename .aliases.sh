@@ -1,7 +1,7 @@
 ########################################
 # Directory
 #######################################
-alias cdd='cd developments'
+alias cdd='cd ~/developments'
 
 ########################################
 # Docker
@@ -17,7 +17,7 @@ alias dcd='docker-compose down'
 #######################################
 
 # colab
-alias colab='docker run --gpus=all -p 127.0.0.1:9000:8080 asia-docker.pkg.dev/colab-images/public/runtime'
+alias colab='docker run --rm --gpus=all -p 127.0.0.1:9000:8080 asia-docker.pkg.dev/colab-images/public/runtime'
 
 ########################################
 # Only for Linux
