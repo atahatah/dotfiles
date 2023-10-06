@@ -1,5 +1,7 @@
 # dotfiles
 
+![example workflow](https://github.com/atahatah/dotfiles/actions/workflows/main.yml/badge.svg)
+
 ## 特徴
 
 - MacOS と Ubuntu の環境を想定しています。
