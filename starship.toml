@@ -80,8 +80,8 @@ style = 'bold green'
 symbol = ' '
 
 [custom.gpu]
-# Linux/Zshではsedのところで'%'だけの置換にすると'%{'みたいに出力されるので、'%%'とし、他の環境では'%%'と出力されないようにtrを置いている。
-command = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | tr '\n' ' ' | sed 's/[0-9]\\+/&%%/g' | tr '%%' '%'"
+# Zshでは`%`がエスケープシーケンス
+command = "[ -n \"$ZSH_VERSION\" ] && nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | tr '\n' ' ' | sed 's/[0-9]\\+/&%%/g' || nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | tr '\n' ' ' | sed 's/[0-9]\\+/&%/g'"
 description = 'The usage rate of the NVIDIA GPU'
 when = ' type nvidia-smi && (ls *.py || ls *.ipynb)'
 format = 'on [$symbol $output]($style) '
