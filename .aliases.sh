@@ -13,17 +13,19 @@ alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
 
 ########################################
+# sleep settings
+#######################################
+if [ `uname` = 'Linux' ]; then
+    alias disablesleep='systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target'
+    alias enablesleep='systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target'
+elif [ `uname` = 'Darwin' ]; then
+    alias disablesleep='pmset -a disablesleep 1'
+    alias enablesleep='pmset -a disablesleep 0'
+fi
+
+########################################
 # etc
 #######################################
 
 # colab
 alias colab='docker run --rm --gpus=all -p 127.0.0.1:9000:8080 asia-docker.pkg.dev/colab-images/public/runtime'
-
-########################################
-# Only for Linux
-#######################################
-if [ `uname` = 'Linux' ]; then
-    # sleep
-    alias disableSleep='systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target'
-    alias enableSleep='systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target'
-fi
