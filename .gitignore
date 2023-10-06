@@ -23,6 +23,7 @@
 !/.github/workflows/main.yml
 !/bin/
 !/img/
+!/ref/
 !/.gitignore
 !/docker-compose.yml
 !/Dockerfile

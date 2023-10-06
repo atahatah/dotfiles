@@ -16,7 +16,7 @@ make install
 
 ### フォントの設定
 
-- VSCode(MacOS)
+- VSCode(MacOS/Ubuntu 22.04)
   `editor.fontFamily`に、`Knack Nerd Font`を追加。
 
 - Terminal(MacOS)
@@ -61,6 +61,10 @@ docker compose exec dotfiles zsh
 ```sh
 docker compose down
 ```
+
+### その他
+
+NVIDIA Driver が壊れた場合の再インストールは[こちら](ref/nvidia.md)。
 
 ## 参考
 
