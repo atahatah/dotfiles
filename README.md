@@ -25,6 +25,10 @@ make install
   `Terminal`を開き、`Cmd+,`でプロファイルを開き、フォントを次のように`Knack Nerd Font`に変更する。
   ![ターミナルのフォントの変更](img/macos_terminal_font.png)
 
+- iTerm2(MacOS)
+  `iTerm2`を開き、`Cmd+,`でプロファイルを開き、フォントを次のように`Knack Nerd Font`に変更する。
+  ![iTerm2のフォントの変更](img/iterm2_font.png)
+
 ### ローカルにインストール
 
 `$HOME`以下のみの変更に抑えます。ただし、MacOS の場合、`Homebrew`とそれによる dependencies のインストールが抑制されます。このインストール方法は、どちらかというと Linux 環境を想定しています。
