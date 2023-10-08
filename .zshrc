@@ -89,8 +89,8 @@ fi
 ########################################
 
 # when i type some chars, terminal moves the lines that start with the same chars
-bindkey '^p' history-beginning-search-backward
-bindkey '^n' history-beginning-search-backward
+# bindkey '^p' history-beginning-search-backward
+# bindkey '^n' history-beginning-search-backward
 
 ########################################
 # Settings
