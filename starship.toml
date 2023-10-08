@@ -71,10 +71,11 @@ zsh_indicator = ' %'
 
 [status]
 disabled = false
-format = '[$symbol]($style)'
+format = '[$symbol$common_meaning$signal_name$maybe_int]($style) '
 map_symbol = true
-success_symbol = '[](bold green) '
-symbol = '[✗](bold red) '
+success_symbol = '[](bold green)'
+symbol = '[✗](bold red)'
+pipestatus = true
 
 [sudo]
 disabled = false
