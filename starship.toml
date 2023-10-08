@@ -20,13 +20,16 @@ format = '[ $duration]($style)'
 [container]
 format = '[$symbol]($style)'
 style = 'blue bold'
-symbol = 'Dk'
+symbol = '🐳'
 
 [dart]
 symbol = ' '
 
 [directory]
 truncation_length = 8
+
+[docker_context]
+disabled = true
 
 [gcloud]
 disabled = true
