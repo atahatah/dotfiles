@@ -13,14 +13,14 @@ ZDOTDIR=~
 ########################################
 # read environment dependant
 ########################################
-[ -f $ZDOTDIR/.zshrc_`uname`.zsh ] && . $ZDOTDIR/.zshrc_`uname`.zsh
-[ -f $ZDOTDIR/.zshrc_local.zsh ] && . $ZDOTDIR/.zshrc_local.zsh
+[[ -f $ZDOTDIR/.zshrc_`uname`.zsh ]] && . $ZDOTDIR/.zshrc_`uname`.zsh
+[[ -f $ZDOTDIR/.zshrc_local.zsh ]] && . $ZDOTDIR/.zshrc_local.zsh
 
 ########################################
 # alias
 ########################################
 
-[ -f $HOME/.aliases.sh ] && . $HOME/.aliases.sh
+[[ -f $HOME/.aliases.sh ]] && . $HOME/.aliases.sh
 
 ########################################
 # sheldon
@@ -70,7 +70,7 @@ if type starship > /dev/null; then
     # starship
     eval "$(starship init zsh)"
 else
-    [ -f /.dockerenv ] && DOCKERSTATUS=$'%F{blue} Docker %f' || DOCKERSTATUS=''
+    [[ -f /.dockerenv ]] && DOCKERSTATUS=$'%F{blue} Docker %f' || DOCKERSTATUS=''
 
     # to load git branch name
     autoload -Uz vcs_info

@@ -10,7 +10,6 @@
 export PATH="$PATH:~/Library/Android/sdk/platform-tools"
 export PATH="$PATH:/Library/TeX/texbin/latexmk"
 export PATH="$PATH:/usr/local/smlnj/bin"
-export PATH="$PATH:$BREWPATH/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 #######################################
@@ -37,9 +36,6 @@ fi
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
 fi
 
 # for docker compose
@@ -47,7 +43,9 @@ mkdir -p ~/.zsh/completions
 [[ ! -L ~/.zsh/completions/_docker-compose ]] &&
   ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completions/_docker-compose
 fpath=(~/.zsh/completions $fpath)
-autoload -Uz compinit && compinit
+
+# これは`.zshrc`に存在する。
+# autoload -Uz compinit && compinit
 
 ########################################
 # unset

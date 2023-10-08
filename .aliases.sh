@@ -67,3 +67,5 @@ fi
 
 # colab
 alias colab='docker run --rm --gpus=all -p 127.0.0.1:9000:8080 asia-docker.pkg.dev/colab-images/public/runtime'
+# path
+alias path='echo $PATH | tr ":" "\n"'
