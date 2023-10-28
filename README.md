@@ -57,7 +57,6 @@ Docker を使ってテストすることが可能です。
 
 ```sh
 cd path/to/dir
-docker compose build
 docker compose up -d
 docker compose exec dotfiles zsh
 ```
