@@ -40,10 +40,10 @@ alias ..3='cd ../../..'
 # Docker
 #######################################
 alias d='docker'
-alias dc='docker-compose'
-alias dcb='docker-compose build'
-alias dcu='docker-compose up -d'
-alias dcd='docker-compose down'
+alias dc='docker compose'
+alias dcb='docker compose build'
+alias dcu='docker compose up -d'
+alias dcd='docker compose down'
 alias dcr='dcd&&dcu'
 
 ########################################
