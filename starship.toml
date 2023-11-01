@@ -20,7 +20,7 @@ format = '[ $duration]($style)'
 [container]
 format = '[$symbol]($style)'
 style = 'blue bold'
-symbol = '🐳'
+symbol = 'DK'
 
 [dart]
 symbol = ' '
