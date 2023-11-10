@@ -8,6 +8,14 @@
 - Docker 内の dotfiles としての利用も想定しています。
 - `$HOME`以下のみの変更に抑えることも可能です。
 
+## 依存関係
+### Ubuntu 22.04
+- curl
+- zsh
+```sh
+sudo apt update && sudo apt install -y curl zsh
+```
+
 ## インストール
 
 ```sh
@@ -37,14 +45,6 @@ make install
 git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles
 cd $HOME/dotfiles
 make install_locally
-```
-
-## 依存関係
-### Ubuntu 22.04
-- curl
-- zsh
-```sh
-sudo apt update && sudo apt install -y curl zsh
 ```
 
 ## 更新
