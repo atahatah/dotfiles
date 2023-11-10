@@ -39,6 +39,14 @@ cd $HOME/dotfiles
 make install_locally
 ```
 
+## 依存関係
+### Ubuntu 22.04
+- curl
+- zsh
+```sh
+sudo apt update && sudo apt install -y curl zsh
+```
+
 ## 更新
 
 zsh プラグインなどの更新の実行
