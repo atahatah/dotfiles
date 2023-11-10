@@ -47,9 +47,10 @@ alias dcd='docker compose down'
 alias dcr='dcd&&dcu'
 
 ########################################
-# Docker
+# Dotfiles
 #######################################
 alias dot='type code > /dev/null && code ~/dotfiles || cd ~/dotfiles'
+alias install_command='echo "sudo apt update && sudo apt install -y curl zsh && git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install && chsh -s $(which zsh)" | pbcopy'
 
 ########################################
 # sleep settings
@@ -72,3 +73,5 @@ alias colab='docker run --rm --gpus=all -p 127.0.0.1:9000:8080 asia-docker.pkg.d
 alias ipaddr='ip -br -c addr'
 # path
 alias path='echo $PATH | tr ":" "\n"'
+# copy to clip board
+alias pbcopy='xsel --clipboard --input'
