@@ -49,7 +49,7 @@ alias dcr='dcd&&dcu'
 ########################################
 # Docker
 #######################################
-alias dot='cd ~/dotfiles'
+alias dot='type code > /dev/null && code ~/dotfiles || cd ~/dotfiles'
 
 ########################################
 # sleep settings
@@ -68,5 +68,7 @@ fi
 
 # colab
 alias colab='docker run --rm --gpus=all -p 127.0.0.1:9000:8080 asia-docker.pkg.dev/colab-images/public/runtime'
+# show ip addr
+alias ipaddr='ip -br -c addr'
 # path
 alias path='echo $PATH | tr ":" "\n"'
