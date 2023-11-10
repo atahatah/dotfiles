@@ -19,9 +19,7 @@ sudo apt update && sudo apt install -y curl zsh
 ## インストール
 
 ```sh
-git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles
-cd $HOME/dotfiles
-make install
+git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install && chsh -s $(which zsh)
 ```
 
 ### フォントの設定
@@ -42,9 +40,7 @@ make install
 `$HOME`以下のみの変更に抑えます。ただし、MacOS の場合、`Homebrew`とそれによる dependencies のインストールが抑制されます。このインストール方法は、どちらかというと Linux 環境を想定しています。
 
 ```sh
-git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles
-cd $HOME/dotfiles
-make install_locally
+git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install_locally && chsh -s $(which zsh)
 ```
 
 ## 更新
