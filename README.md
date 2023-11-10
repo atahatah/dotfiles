@@ -40,7 +40,7 @@ git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/do
 `$HOME`以下のみの変更に抑えます。ただし、MacOS の場合、`Homebrew`とそれによる dependencies のインストールが抑制されます。このインストール方法は、どちらかというと Linux 環境を想定しています。
 
 ```sh
-git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install_locally && chsh -s $(which zsh)
+git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install_locally
 ```
 
 ## 更新
