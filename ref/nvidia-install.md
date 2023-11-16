@@ -12,6 +12,8 @@ sudo apt install ubuntu-drivers-common
 の後、[ここ](nvidia.md)の通りにすると入る？
 コマンドはchatgpt情報
 
+yappa [koko](https://developer.nvidia.com/cuda-downloads)?
+
 ## Install Docker
 
 1. Dockerのインストールは[こちら](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
