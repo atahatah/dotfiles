@@ -73,6 +73,7 @@ docker compose down
 
 ### その他
 
+NVIDIA Driverの新規インストール方法は[こちら](ref/nvidia-install.md)
 NVIDIA Driver が壊れた場合の再インストールは[こちら](ref/nvidia.md)。
 
 ## 参考
