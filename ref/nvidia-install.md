@@ -51,12 +51,16 @@ sudo docker run hello-world
 
 [こちら](https://qiita.com/DQNEO/items/da5df074c48b012152ee)より引用
 ```sh
-sudo gpasswd -a $USER docker
+sudo gpasswd -a $USER docker && sudo systemctl restart docker && exit
 ```
+もう一度ログインすると`sudo`なしで`docker`が起動する。
 ```sh
-sudo systemctl restart docker
+docker run hello-world
 ```
-再ログインすると反映される。
+
+3. NVIDIA Dockerのインストール
+
+[ここ](nvidia.md#nvidia-docker-のインストール)を参照
 
 ## GitHubにsshを通す
 1. keyを作る

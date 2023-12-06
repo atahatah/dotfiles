@@ -80,7 +80,7 @@ Docker daemon を再起動
 sudo systemctl restart docker
 ```
 
-ちゃんとインストールできたか次で。確認してください。
+ちゃんとインストールできたか次で確認してください。
 ```zsh
 docker run --gpus all --rm nvidia/cuda:12.2.0-base-ubuntu22.04 nvidia-smi
 ```
