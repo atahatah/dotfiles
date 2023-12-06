@@ -1,18 +1,26 @@
 # Install For ML
 実際に打ったコマンドを羅列していますが、変更される可能性があるので必ず参照元を確認してください。
 ## Install CUDA Toolkit and Driver
-1. インストール前に行うこと [こちら](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
-2. インストール [こちら](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu)
 
-もしくは
+1. [ここ](https://developer.nvidia.com/cuda-downloads)にしたがってNVIDIA Driverをインストール
+2. cuda-driversをインストールするためのコマンドを入力すると次の画面が表示される。 
+
+![config secure boot](../img/configuring_secure_boot.png)
+
+スペースを押し次の画面でパスワードを入力する。(後でもう１度入力するもの)
+
+![config secure boot password](../img/configuring_secure_boot_passowrd.png)
+
+3. PCを再起動する。
 ```sh
-sudo apt update
-sudo apt install ubuntu-drivers-common
+sudo reboot
 ```
-の後、[ここ](nvidia.md)の通りにすると入る？
-コマンドはchatgpt情報
+4. PCの起動中に青い画面で4つほど選択肢を提示されるので、`Enroll MOK`を選び先程入力したパスワードを入力する。
+5. NVIDIA Driverが入ったか確認する。
+```sh
+nvidia-smi
+```
 
-yappa [koko](https://developer.nvidia.com/cuda-downloads)?
 
 ## Install Docker
 
