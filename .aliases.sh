@@ -57,6 +57,7 @@ alias install_locally_command='echo "sudo apt update && sudo apt install -y make
 # Git
 #######################################
 alias repo-url='git remote -v | sed -n -e "s/^origin[[:space:]]git@github\.com:*\(.*\)\.git[[:space:]]*(fetch)/github.com\/\1/p" | pbcopy'
+alias clone-cmd='git remote -v | sed -n -e "s/^origin[[:space:]]*\(git@github.com:.*\)[[:space:]]*(fetch)/git clone \1/p" | pbcopy'
 
 ########################################
 # sleep settings
