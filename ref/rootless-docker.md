@@ -54,6 +54,10 @@ sudo cp /etc/nvidia-container-runtime/config.toml /etc/nvidia-container-runtime/
 ```sh
 sudo vi /etc/nvidia-container-runtime/config.toml
 ```
+```txt
+-#no-cgroups = false
++no-cgroups = true
+```
 
 ## 各ユーザ毎にすること
 ```sh
