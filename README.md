@@ -11,9 +11,11 @@
 ## 依存関係
 ### Ubuntu 22.04
 - curl
+- git
+- make
 - zsh
 ```sh
-sudo apt update && sudo apt install -y curl zsh
+sudo apt update && sudo apt install -y curl git make zsh
 ```
 
 ## インストール

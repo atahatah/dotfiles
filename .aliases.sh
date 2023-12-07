@@ -50,8 +50,8 @@ alias dcr='dcd&&dcu'
 # Dotfiles
 #######################################
 alias dot='type code > /dev/null && code ~/dotfiles || cd ~/dotfiles'
-alias install_command='echo "sudo apt update && sudo apt install -y curl zsh && git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install && chsh -s $(which zsh)" | pbcopy'
-alias install_locally_command='echo "sudo apt update && sudo apt install -y make git curl zsh && git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install_locally && chsh -s /usr/bin/zsh" | pbcopy'
+alias install_command='echo "sudo apt update && sudo apt install -y make git curl zsh && git clone https://github.com/atahatah/dotfiles.git \$HOME/dotfiles && cd \$HOME/dotfiles && make install && chsh -s $(which zsh)" | pbcopy'
+alias install_locally_command='echo "sudo apt update && sudo apt install -y make git curl zsh && git clone https://github.com/atahatah/dotfiles.git \$HOME/dotfiles && cd \$HOME/dotfiles && make install_locally && chsh -s $(which zsh)" | pbcopy'
 
 ########################################
 # sleep settings
