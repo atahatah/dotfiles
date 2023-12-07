@@ -77,11 +77,11 @@ Host github github.com
 	IdentityFile ~/.ssh/github
 	User git
 ```
-3. 確認
-```sh
-ssh -T github
-```
-4. [GitHub](https://github.com/settings/keys)に公開鍵を保存する。
+3. [GitHub](https://github.com/settings/keys)に公開鍵を保存する。
 ```sh
 cat ~/.ssh/github.pub
+```
+4. 確認
+```sh
+ssh -T github
 ```
