@@ -54,6 +54,11 @@ alias install_command='echo "sudo apt update && sudo apt install -y make git cur
 alias install_locally_command='echo "sudo apt update && sudo apt install -y make git curl zsh && git clone https://github.com/atahatah/dotfiles.git \$HOME/dotfiles && cd \$HOME/dotfiles && make install_locally && chsh -s $(which zsh)" | pbcopy'
 
 ########################################
+# Git
+#######################################
+alias repo-url='git remote -v | sed -n -e "s/^origin[[:space:]]git@github\.com:*\(.*\)\.git[[:space:]]*(fetch)/github.com\/\1/p" | pbcopy'
+
+########################################
 # sleep settings
 #######################################
 if [ `uname` = 'Linux' ]; then
