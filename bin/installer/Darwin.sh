@@ -58,6 +58,7 @@ __dock_item() {
 defaults write com.apple.dock \
                persistent-apps -array "$(__dock_item /System/Applications/Launchpad.app)" \
                                       "$(__dock_item /Applications/Google\ Chrome.app)" \
+                                      "$(__dock_item /Applications/Slack.app)" \
                                       "$(__dock_item /System/Applications/Utilities/Terminal.app)" \
                                       "$(__dock_item /System/Applications/System\ Settings.app)" \
                                       "$(__dock_item /Applications/Visual\ Studio\ Code.app)" \
