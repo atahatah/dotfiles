@@ -36,6 +36,10 @@ jobs:
       - name: upgrade with this repository
         run: make upgrade
         shell: bash
+      
+      - name: opt installer
+        run: make opt_install
+        shell: bash
 
   Linux:
     runs-on: ubuntu-latest

@@ -19,9 +19,13 @@ sudo apt update && sudo apt install -y curl git make zsh
 ```
 
 ## インストール
-
+- Ubuntu 22.04
 ```sh
-git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install && chsh -s $(which zsh)
+git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install_locally && chsh -s $(which zsh)
+```
+- MacOS
+```sh
+git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install
 ```
 
 ### フォントの設定
@@ -43,6 +47,12 @@ git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/do
 
 ```sh
 git clone https://github.com/atahatah/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && make install_locally
+```
+
+## 追加のインストール
+MacOSについて必須ではないインストール
+```sh
+cd &HOME/dotfiles && make opt_install
 ```
 
 ## 更新
