@@ -7,3 +7,5 @@ install_locally: link
 	bin/installer/installer.sh -l
 upgrade:
 	bin/upgrader/upgrader.sh
+opt_install:
+	bin/opt/installer.sh
