@@ -1,2 +1,3 @@
-cask "notion"
+cask "karabiner-elements"
 cask "microsoft-outlook"
+cask "notion"
