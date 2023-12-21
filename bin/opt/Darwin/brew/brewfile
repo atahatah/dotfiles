@@ -1,3 +1,4 @@
+brew "mas"
 cask "karabiner-elements"
 cask "microsoft-outlook"
 cask "microsoft-powerpoint"
