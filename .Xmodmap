@@ -1,1 +1,3 @@
 keycode  97 = underscore underscore underscore underscore
+keycode 102 = Hiragana NoSymbol Hiragana
+keycode 100 = Eisu_toggle NoSymbol Eisu_toggle

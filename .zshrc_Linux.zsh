@@ -17,4 +17,4 @@ fi
 ########################################
 # Key Mappings
 #######################################
-type xmodmap > /dev/null && xmodmap ~/.Xmodmap
+[ $XDG_SESSION_TYPE != tty ] && xmodmap ~/.Xmodmap
