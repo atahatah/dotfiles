@@ -82,3 +82,5 @@ alias ipaddr='ip -br -c addr'
 alias path='echo $PATH | tr ":" "\n"'
 # copy to clip board
 alias pbcopy='xsel --clipboard --input'
+# vscode
+alias c='code .'
