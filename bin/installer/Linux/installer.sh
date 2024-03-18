@@ -2,6 +2,9 @@
 
 printf "${cyan}Start Linux specific installation...${reset_color}\n"
 
+. bin/Linux/funcs.sh
+password
+
 ########################################
 # environment dependant settings
 ########################################
@@ -9,12 +12,23 @@ pushd . > /dev/null
 cd bin/installer
 
 if [ -f /.dockerenv ]; then
-    . Linux-docker.sh
+    . docker.sh
 else
-    . Linux-native.sh
+    . native.sh
 fi
 
 popd > /dev/null
+
+########################################
+# install packeages
+########################################
+if [ -n $LOCAL ]; then
+    echo "$password" | sudo -S apt-get update 
+    echo "$password" | sudo -S apt-get install -y \
+        curl \
+        zsh
+    __show_installation_status "packages"
+fi
 
 ########################################
 # plugin manager

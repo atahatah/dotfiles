@@ -49,7 +49,7 @@ fi
 ########################################
 # environment dependant settings
 ########################################
-. bin/installer/`uname`.sh
+. bin/installer/`uname`/installer.sh
 
 ########################################
 # cross-shell prompt

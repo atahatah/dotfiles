@@ -3,12 +3,9 @@ FROM ubuntu:22.04
 RUN apt-get update && apt-get install -y \
     bash \
     ca-certificates \
-    curl \
     git \
     make \
     sudo \
-    zsh \
-    # zsh-vcs \
     && rm -rf /var/cache/apk/*
 
 RUN adduser --disabled-password --gecos '' --shell /bin/zsh user

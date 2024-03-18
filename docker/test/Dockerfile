@@ -1,16 +1,11 @@
 FROM alpine:3.18
-# FROM ubuntu:22.04
 
-# RUN apt update && apt install -y \
 RUN apk --update add \
     bash \
     ca-certificates \
-    curl \
     git \
     make \
     sudo \
-    zsh \
-    zsh-vcs \
     && rm -rf /var/cache/apk/*
 
 RUN adduser --disabled-password --gecos '' --shell /bin/zsh user
