@@ -22,11 +22,10 @@
 !/.github/workflows/
 !/.github/workflows/main.yml
 !/bin/
+!/docker/
 !/img/
 !/opt/
 !/ref/
 !/.gitignore
-!/docker-compose.yml
-!/Dockerfile
 !/Makefile
 !/README.md

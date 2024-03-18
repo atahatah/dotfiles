@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  dotfiles-test:
+    build:
+      context: ../..
+      dockerfile: docker/test/Dockerfile
+    tty: true
+    stdin_open: true
