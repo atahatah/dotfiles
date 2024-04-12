@@ -54,22 +54,12 @@ fi
 ########################################
 # cross-shell prompt
 ########################################
-if $LOCAL; then
-    if [ ! -f $HOME/.local/bin/starship ]; then
-        printf "${cyan}Installing starship locally...${reset_color}\n"
-        curl -sS https://starship.rs/install.sh | sh -s -- -y -b $HOME/.local/bin/
-        __show_installation_status "starship locally"
-    else
-        printf "${cyan}starship has already installed locally.${reset_color}\n"
-    fi
+if [ ! -f $HOME/.local/bin/starship ]; then
+    printf "${cyan}Installing starship locally...${reset_color}\n"
+    curl -sS https://starship.rs/install.sh | sh -s -- -y -b $HOME/.local/bin/
+    __show_installation_status "starship locally"
 else
-    if [ ! -f /usr/local/bin/starship ]; then
-        printf "${cyan}Installing starship globaly...${reset_color}\n"
-        curl -sS https://starship.rs/install.sh | sh -s -- -y
-        __show_installation_status "starship globaly"
-    else
-        printf "${cyan}starship has already installed globally.${reset_color}\n"
-    fi
+    printf "${cyan}starship has already installed locally.${reset_color}\n"
 fi
 
 ########################################
