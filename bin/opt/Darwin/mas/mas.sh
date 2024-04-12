@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # LINE
-mas install 539883307
+# mas install 539883307

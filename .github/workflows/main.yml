@@ -29,6 +29,12 @@ jobs:
       - name: install all with this repository
         run: make install
         shell: bash
+      
+      - name: test installation
+        run: |
+          starship --version
+          sheldon --version
+        shell: bash
 
       - name: install all with this repository(2nd)
         run: make install
@@ -57,6 +63,12 @@ jobs:
         run: make install
         shell: bash
 
+      - name: test installation
+        run: |
+          starship --version
+          sheldon --version
+        shell: bash
+
       - name: install all with this repository(2nd)
         run: make install
         shell: bash
@@ -80,6 +92,12 @@ jobs:
         run: make install_locally
         shell: bash
 
+      - name: test installation
+        run: |
+          starship --version
+          sheldon --version
+        shell: bash
+
       - name: install all with this repository(2nd)
         run: make install_locally
         shell: bash
@@ -101,4 +119,9 @@ jobs:
         shell: bash
 
       - run: docker compose run dotfiles uname -a
+        shell: bash
+
+      - name: test installation
+        run: >
+          docker compose run dotfiles sh -c "starship --version && sheldon --version"
         shell: bash
