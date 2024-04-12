@@ -122,6 +122,7 @@ jobs:
         shell: bash
 
       - name: test installation
-        run: >
-          docker compose run dotfiles sh -c "starship --version && sheldon --version"
+        run: |
+          docker compose run dotfiles starship --version
+          docker compose run dotfiles sheldon --version
         shell: bash
