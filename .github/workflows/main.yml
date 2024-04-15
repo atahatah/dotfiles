@@ -123,6 +123,6 @@ jobs:
 
       - name: test installation
         run: |
-          docker compose run dotfiles starship --version
-          docker compose run dotfiles sheldon --version
+          docker compose run dotfiles /home/user/.local/bin/starship --version
+          docker compose run dotfiles /home/user/.local/bin/sheldon --version
         shell: bash
