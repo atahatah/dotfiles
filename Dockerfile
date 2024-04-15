@@ -1,8 +1,8 @@
-FROM alpine:3.18
-# FROM ubuntu:22.04
+# FROM alpine:latest
+FROM ubuntu:22.04
 
-# RUN apt update && apt install -y \
-RUN apk update && apk add --no-cache \
+RUN apt-get update && apt-get install -y \
+    # RUN apk update && apk add --no-cache \
     bash \
     ca-certificates \
     curl \
@@ -10,7 +10,6 @@ RUN apk update && apk add --no-cache \
     make \
     sudo \
     zsh \
-    zsh-vcs \
     && rm -rf /var/cache/apk/*
 
 RUN adduser --disabled-password --gecos '' --shell /bin/zsh user

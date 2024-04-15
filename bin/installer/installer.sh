@@ -56,6 +56,8 @@ fi
 ########################################
 if [ ! -f $HOME/.local/bin/starship ]; then
     printf "${cyan}Installing starship locally...${reset_color}\n"
+    mkdir -p $HOME/.local/bin
+    export PATH=$PATH:$HOME/.local/bin
     curl -sS https://starship.rs/install.sh | sh -s -- -y -b $HOME/.local/bin/
     __show_installation_status "starship locally"
 else
