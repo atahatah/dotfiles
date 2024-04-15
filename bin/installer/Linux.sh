@@ -23,6 +23,8 @@ popd > /dev/null
 # install sheldon by pre-built binaries
 if [ ! -f $HOME/.local/bin/sheldon ]; then
     printf "${cyan}Downloading sheldon...${reset_color}\n"
+    mkdir -p $HOME/.local/bin
+    export PATH=$PATH:$HOME/.local/bin
     curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
         | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
     __show_installation_status "sheldon"
