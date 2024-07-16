@@ -1,0 +1,47 @@
+{
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "Knack Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSave": "onFocusChange",
+    // ----------------- Dart -----------------
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "dart.runPubGetOnPubspecChanges": "never",
+    "dart.flutterCreateOrganization": "jp.hatahata",
+    "dart.sdkPaths": [],
+    "dart.flutterSdkPaths": [],
+    // "dart.flutterSdkPath": "/Users/ishiyamakazuki/.asdf/installs/flutter/3.7.2-stable",
+    // ----------------- Diff -----------------
+    "diffEditor.ignoreTrimWhitespace": false,
+    // ----------------- Git -----------------
+    "git.autofetch": true,
+    // ----------------- Notebook -----------------
+    "notebook.lineNumbers": "on",
+    // ----------------- Vim -----------------
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.useSystemClipboard": true
+}

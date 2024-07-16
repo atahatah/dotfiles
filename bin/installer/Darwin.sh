@@ -20,9 +20,19 @@ else
 
   # install all dependencies from the Brewfile with Homebrew
   printf "${cyan}Installing all dependencies from the Brewfile with Homebrew...${reset_color}\n"
-  brew bundle --global
+  brew bundle --file .Brewfile
   # Homebrew will show installation result
 fi
+
+########################################
+# VSCode
+########################################
+printf "${cyan}Installing all extensions to vocode from the vscode-extensions...${reset_color}\n"
+# list installed extensions with `code --list-extensions > vscode-extensions`
+for extension in $(cat vscode-extensions); do code --install-extension $extension; done
+printf "${cyan}Copying vscode settings...${reset_color}\n"
+mv ~/Library/Application\ Support/Code/User/settings.json backup/vscode-settings.jsonc
+cp vscode-settings.jsonc ~/Library/Application\ Support/Code/User/settings.json
 
 ########################################
 # font
@@ -61,6 +71,12 @@ defaults write com.apple.dock \
                                       "$(__dock_item /Applications/Slack.app)" \
                                       "$(__dock_item /System/Applications/Utilities/Terminal.app)" \
                                       "$(__dock_item /System/Applications/System\ Settings.app)" \
-                                      "$(__dock_item /Applications/Visual\ Studio\ Code.app)" \
+                                      "$(__dock_item /Applications/Visual\ Studio\ Code.app)"
+
+defaults write com.apple.dock tilesize -int 64
+defaults write com.apple.dock autohide -bool true
 
 killall Dock
+
+# disable showing char when holding one key
+defaults write -g ApplePressAndHoldEnabled -bool false
