@@ -85,6 +85,6 @@ alias ipaddr='ip -br -c addr'
 # path
 alias path='echo $PATH | tr ":" "\n"'
 # copy to clip board
-elif [ `uname` = 'Darwin' ]; then
+if [ `uname` = 'Darwin' ]; then
     alias pbcopy='xsel --clipboard --input'
 fi
