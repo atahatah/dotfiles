@@ -11,7 +11,6 @@
 if [[ -f $HOME/.asdf/asdf.sh ]]; then
     . "$HOME/.asdf/asdf.sh"
     fpath=(${ASDF_DIR}/completions $fpath)
-    autoload -Uz compinit && compinit
 fi
 
 ########################################

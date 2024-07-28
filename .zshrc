@@ -9,6 +9,7 @@ ZDOTDIR=~
 ########################################
 [[ -d $HOME/bin ]] && export PATH="$PATH:$HOME/bin"
 [[ -d $HOME/.local/bin ]] && export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/.gem/bin:$PATH
 
 ########################################
 # read environment dependant
@@ -49,7 +50,8 @@ eval "$(sheldon source)"
 ########################################
 
 # for completion
-autoload -Uz compinit && compinit
+# remove this line because we use zsh-autocomplete
+# autoload -Uz compinit && compinit
 
 # match larger chars if you type smaller chars
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -91,6 +93,29 @@ fi
 # when i type some chars, terminal moves the lines that start with the same chars
 # bindkey '^p' history-beginning-search-backward
 # bindkey '^n' history-beginning-search-backward
+
+# with zsh-autocomplete
+
+# This makes Enter always submit the command line, even when you are in the menu:
+bindkey -M menuselect '^M' .accept-line
+
+# This makes ← and → always move the cursor on the command line, even when you are in the menu:
+bindkey -M menuselect  '^[[D' .backward-char  '^[OD' .backward-char
+bindkey -M menuselect  '^[[C'  .forward-char  '^[OC'  .forward-char
+
+# Autocomplete overrides the behavior of some of Zsh's built-in keyboard widgets.
+bindkey '^R' .history-incremental-search-backward
+bindkey '^S' .history-incremental-search-forward
+
+# First insert the common substring
+# all Tab widgets
+zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
+# all history widgets
+zstyle ':autocomplete:*history*:*' insert-unambiguous yes
+# ^S
+zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
+# Insert prefix instead of substring
+zstyle ':completion:*:*' matcher-list 'm:{[:lower:]-}={[:upper:]_}' '+r:|[.]=**'
 
 ########################################
 # Settings

@@ -11,6 +11,9 @@
 !/.tmux.conf
 !/.vimrc
 !/.Xmodmap
+!/.zshenv
+!/.zshenv_Darwin.zsh
+!/.zshenv_Linux.zsh
 !/.zshrc
 !/.zshrc_Darwin.zsh
 !/.zshrc_Linux.zsh
