@@ -18,6 +18,11 @@ github = "romkatv/zsh-defer"
 [templates]
 defer = "{{ hooks | get: \"pre\" | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks | get: \"post\" | nl }}"
 
+[plugins.zsh-autocomplete]
+github = 'marlonrichert/zsh-autocomplete'
+# the newest version of zsh-autocomplete does not seem to work well
+tag = '23.05.24'
+
 [plugins.zsh-autosuggestions]
 github = 'zsh-users/zsh-autosuggestions'
 use = ['{{ name }}.zsh']
@@ -25,9 +30,6 @@ apply = ["defer"]
 
 [plugins.zsh-syntax-highlighting]
 github = 'zsh-users/zsh-syntax-highlighting'
-
-[plugins.zsh-zutocomplete]
-github = 'marlonrichert/zsh-autocomplete'
 
 # For example:
 #

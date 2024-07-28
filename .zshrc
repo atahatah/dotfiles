@@ -12,12 +12,6 @@ ZDOTDIR=~
 export PATH=$HOME/.gem/bin:$PATH
 
 ########################################
-# read environment dependant
-########################################
-[[ -f $ZDOTDIR/.zshrc_`uname`.zsh ]] && . $ZDOTDIR/.zshrc_`uname`.zsh
-[[ -f $ZDOTDIR/.zshrc_local.zsh ]] && . $ZDOTDIR/.zshrc_local.zsh
-
-########################################
 # alias
 ########################################
 
@@ -29,8 +23,6 @@ export PATH=$HOME/.gem/bin:$PATH
 
 # loading plugins with sheldon
 eval "$(sheldon source)"
-
-# Autocomplete for Zsh
 
 # Reset history key bindings to Zsh default
 () {
@@ -44,6 +36,12 @@ eval "$(sheldon source)"
       bindkey "$key" down-line-or-history
    done
 }
+
+########################################
+# read environment dependant
+########################################
+[[ -f $ZDOTDIR/.zshrc_`uname`.zsh ]] && . $ZDOTDIR/.zshrc_`uname`.zsh
+[[ -f $ZDOTDIR/.zshrc_local.zsh ]] && . $ZDOTDIR/.zshrc_local.zsh
 
 ########################################
 # tab completion
@@ -116,6 +114,8 @@ zstyle ':autocomplete:*history*:*' insert-unambiguous yes
 zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
 # Insert prefix instead of substring
 zstyle ':completion:*:*' matcher-list 'm:{[:lower:]-}={[:upper:]_}' '+r:|[.]=**'
+
+# zstyle ':autocomplete:*' default-context history-incremental-search-backward
 
 ########################################
 # Settings
