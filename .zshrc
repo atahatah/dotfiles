@@ -18,6 +18,12 @@ export PATH=$HOME/.gem/bin:$PATH
 [[ -f $HOME/.aliases.sh ]] && . $HOME/.aliases.sh
 
 ########################################
+# read environment dependant
+########################################
+[[ -f $ZDOTDIR/.zshrc_`uname`.zsh ]] && . $ZDOTDIR/.zshrc_`uname`.zsh
+[[ -f $ZDOTDIR/.zshrc_local.zsh ]] && . $ZDOTDIR/.zshrc_local.zsh
+
+########################################
 # sheldon
 ########################################
 
@@ -36,12 +42,6 @@ eval "$(sheldon source)"
       bindkey "$key" down-line-or-history
    done
 }
-
-########################################
-# read environment dependant
-########################################
-[[ -f $ZDOTDIR/.zshrc_`uname`.zsh ]] && . $ZDOTDIR/.zshrc_`uname`.zsh
-[[ -f $ZDOTDIR/.zshrc_local.zsh ]] && . $ZDOTDIR/.zshrc_local.zsh
 
 ########################################
 # tab completion
