@@ -44,6 +44,9 @@ mkdir -p ~/.zsh/completions
   ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completions/_docker-compose
 fpath=(~/.zsh/completions $fpath)
 
+## for dart cli
+[[ -f /Users/ishiyamakazuki/.dart-cli-completion/zsh-config.zsh ]] && . /Users/ishiyamakazuki/.dart-cli-completion/zsh-config.zsh || true
+
 # これは`.zshrc`に存在する。
 # autoload -Uz compinit && compinit
 
