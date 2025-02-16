@@ -12,3 +12,10 @@ inoremap <silent> jj <ESC>
 
 " クリップボードにヤンクした内容を保存する
 set clipboard=unnamed
+
+let mapleader = "\<Space>"
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>W :wq<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :q!<CR>
+nnoremap <Leader>a ggVG

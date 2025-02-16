@@ -43,5 +43,56 @@
             ]
         }
     ],
-    "vim.useSystemClipboard": true
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "W"
+            ],
+            "commands": [
+                "workbench.action.files.save",
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ],
+        },
+        {
+            "before": [
+                "leader",
+                "Q"
+            ],
+            "commands": [
+                "workbench.action.closeAllEditors",
+                "workbench.files.action.collapseExplorerFolders"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "p"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "vim.leader": "<space>",
+    "vim.surround": true
 }
