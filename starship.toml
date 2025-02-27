@@ -1,7 +1,100 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = '$status$all'
+# move $status to the start of the prompt
+# move $break_line after $time
+format = """
+$status\
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$gleam\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$nats\
+$direnv\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$jobs\
+$battery\
+$time\
+$line_break\
+$os\
+$container\
+$shell\
+$character\
+"""
 
 [aws]
 disabled = true
@@ -84,6 +177,9 @@ format = '[$symbol]($style)'
 style = 'bold green'
 symbol = ' '
 
+[time]
+disabled = false
+
 [custom.gpu]
 # Zshでは`%`がエスケープシーケンス
 command = "[ -n \"$ZSH_VERSION\" ] && nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | tr '\n' ' ' | sed 's/[0-9]\\+/&%%/g' || nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | tr '\n' ' ' | sed 's/[0-9]\\+/&%/g'"
@@ -92,3 +188,11 @@ when = ' type nvidia-smi && (ls *.py || ls *.ipynb)'
 format = 'on [$symbol $output]($style) '
 style = 'bold purple'
 symbol = ''
+
+# so slow
+# [custom.flutter_version]
+# description = "Flutter version"
+# command = "flutter --version | grep -oE 'Flutter [0-9.]+' | awk '{print $2}'"
+# detect_files = ["pubspec.yaml", "*.dart"]
+# symbol = ""
+# format = '[ $symbol $output]($style)'
