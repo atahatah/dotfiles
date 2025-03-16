@@ -119,3 +119,7 @@ NVIDIA Driver が壊れた場合の再インストールは[こちら](ref/nvidi
 [シェルスクリプトの echo で”問題なく”色をつける(bash 他対応)](https://qiita.com/ko1nksm/items/095bdb8f0eca6d327233)
 
 [tmux(with macOS)でマウススクロールを有効にする](https://zenn.dev/softoika/scraps/19abddeaa09e12)
+
+[vimmerに捧ぐ，tmux入門](https://qiita.com/sigma_devsecops/items/9ad98b9fed744bbd8cf7)
+
+[tmux（2.6以降）のコピーモードについてまとめた（for vimmer](https://qiita.com/shimmer22/items/67ba93060ae456aadd1b)
