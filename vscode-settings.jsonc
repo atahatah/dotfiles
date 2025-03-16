@@ -31,6 +31,18 @@
     "git.autofetch": true,
     // ----------------- Notebook -----------------
     "notebook.lineNumbers": "on",
+    // ----------------- Terminal ------------
+    "terminal.integrated.defaultProfile.linux": "tmux",
+    "terminal.integrated.profiles.linux": {
+        "tmux": {
+            "overrideName": true,
+            "path": "bash",
+            "args": [
+                "-c",
+                "tmux new-session -A -s \"${PWD/$HOME/\\~}\""
+            ]
+        }
+    },
     // ----------------- Vim -----------------
     "vim.insertModeKeyBindings": [
         {
