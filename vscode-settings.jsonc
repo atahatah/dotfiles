@@ -101,6 +101,7 @@
                 "Q"
             ],
             "commands": [
+                "workbench.files.action.focusFilesExplorer",
                 "workbench.action.closeAllEditors",
                 "workbench.files.action.collapseExplorerFolders"
             ]
