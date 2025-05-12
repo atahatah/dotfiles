@@ -114,6 +114,15 @@
             "commands": [
                 "workbench.action.quickOpen"
             ]
+        },
+        {
+            "before": [
+                "leader",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.openSettingsJson"
+            ]
         }
     ],
     "vim.useSystemClipboard": true,

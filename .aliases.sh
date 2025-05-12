@@ -82,6 +82,8 @@ alias colab='docker run --rm --gpus=all -p 127.0.0.1:9000:8080 asia-docker.pkg.d
 alias correct_time='sudo sntp -Ss time.asia.apple.com'
 # show ip addr
 alias ipaddr='ip -br -c addr'
+# tmux
+alias ta='tmux a'
 # path
 alias path='echo $PATH | tr ":" "\n"'
 # copy to clip board
