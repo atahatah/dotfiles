@@ -83,6 +83,7 @@ alias correct_time='sudo sntp -Ss time.asia.apple.com'
 # show ip addr
 alias ipaddr='ip -br -c addr'
 # tmux
+alias t='tmux new-session -A -s default'
 alias ta='tmux a'
 # path
 alias path='echo $PATH | tr ":" "\n"'
