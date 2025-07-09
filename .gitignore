@@ -17,6 +17,7 @@
 !/.zshrc
 !/.zshrc_Darwin.zsh
 !/.zshrc_Linux.zsh
+!/keybindings.jsonc
 !/plugins.toml
 !/starship.toml
 !/vscode-extensions

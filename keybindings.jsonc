@@ -1,0 +1,19 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.focusLeftGroup",
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.focusBelowGroup",
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.focusAboveGroup",
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.focusRightGroup",
+    }
+]
