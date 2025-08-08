@@ -14,11 +14,11 @@ bash
 ```
 
 ```bash
-sudo apt-get --purge remove nvidia-*
+sudo apt-get -y --purge remove nvidia-*
 ```
 
 ```bash
-sudo apt-get --purge remove cuda-*
+sudo apt-get -y --purge remove cuda-*
 ```
 
 2. ドライバのインストール
@@ -32,14 +32,11 @@ sudo dpkg --configure -a
 ```
 
 ```zsh
-sudo apt install nvidia-cuda-toolkit
+sudo apt install -y nvidia-cuda-toolkit
 ```
 
-ちゃんとインストールできたかは次で確認してください。
-
-```zsh
-nvcc -v
-```
+ここで再起動しましょう．
+そしてちゃんとインストールできたかは次で確認してください。
 
 ```zsh
 nvidia-smi
@@ -49,30 +46,33 @@ nvidia-smi
 
 [Installing the NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)のうち、実行したコマンドを羅列します。絶対に下の内容をコピペして実行しないでください。元のサイトを参考にしてください。
 
-1. Apt を使ってインストール
-   Repository を設定
+1. Repository を設定
 
 ```zsh
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
   && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
-    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list \
-  && \
-    sudo apt-get update
+    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+```
+
+更新
+```zsh
+sudo apt-get update
 ```
 
 NVIDIA Container Toolkit をインストール
 
 ```zsh
-sudo apt-get install -y nvidia-container-toolkit
+export NVIDIA_CONTAINER_TOOLKIT_VERSION=1.17.8-1
+  sudo apt-get install -y \
+      nvidia-container-toolkit=${NVIDIA_CONTAINER_TOOLKIT_VERSION} \
+      nvidia-container-toolkit-base=${NVIDIA_CONTAINER_TOOLKIT_VERSION} \
+      libnvidia-container-tools=${NVIDIA_CONTAINER_TOOLKIT_VERSION} \
+      libnvidia-container1=${NVIDIA_CONTAINER_TOOLKIT_VERSION}
 ```
 
 2. Docker を設定
    Docker が NVIDIA Container Runtime を利用できるようにする。
-
-```zsh
-sudo nvidia-ctk runtime configure --runtime=docker
-```
 
 Docker daemon を再起動
 
