@@ -28,6 +28,9 @@ if [[ -f $BREWPATH/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
   source $BREWPATH/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 fi
 
+# for Kiro
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
 ########################################
 # tab completion
 ########################################

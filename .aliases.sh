@@ -88,6 +88,6 @@ alias ta='tmux a'
 # path
 alias path='echo $PATH | tr ":" "\n"'
 # copy to clip board
-if [ `uname` = 'Darwin' ]; then
+if [ `uname` = 'Linux' ]; then
     alias pbcopy='xsel --clipboard --input'
 fi
